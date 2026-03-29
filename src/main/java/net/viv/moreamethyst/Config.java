@@ -1,4 +1,4 @@
-package net.viv.tutorialmod;
+package net.viv.moreamethyst;
 
 import java.util.List;
 
