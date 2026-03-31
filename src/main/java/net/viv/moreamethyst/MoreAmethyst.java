@@ -56,10 +56,7 @@ public class MoreAmethyst {
 
     // Add the example block item to the building block tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.AMETHYST_SHARD_RED);
-            event.accept(ModBlocks.AMETHYST_BLOCK_RED);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
