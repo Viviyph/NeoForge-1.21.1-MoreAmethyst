@@ -32,6 +32,7 @@ public class ModCreativeModeItemTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         output.accept(ModBlocks.AMETHYST_BLOCK_RED);
+                        output.accept(ModBlocks.BUDDING_AMETHYST_RED);
                         output.accept(ModBlocks.SMALL_AMETHYST_BUD_RED);
                         output.accept(ModBlocks.MEDIUM_AMETHYST_BUD_RED);
                         output.accept(ModBlocks.LARGE_AMETHYST_BUD_RED);

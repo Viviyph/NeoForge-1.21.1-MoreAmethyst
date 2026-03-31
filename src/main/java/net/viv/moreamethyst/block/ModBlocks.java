@@ -6,10 +6,12 @@ import net.minecraft.world.level.block.AmethystClusterBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.viv.moreamethyst.MoreAmethyst;
+import net.viv.moreamethyst.block.custom.BuddingAmethystRed;
 import net.viv.moreamethyst.item.ModItems;
 
 import java.util.function.Supplier;
@@ -23,27 +25,39 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST)));
 
+    public static final DeferredBlock<Block> BUDDING_AMETHYST_RED = registerBlock("budding_amethyst_red",
+            () -> new BuddingAmethystRed(BlockBehaviour.Properties.of()
+                    .strength(1.5f)
+                    .sound(SoundType.AMETHYST)
+                    .pushReaction(PushReaction.BLOCK)
+                    .randomTicks()
+                    .requiresCorrectToolForDrops()));
+
     public static final  DeferredBlock<Block> SMALL_AMETHYST_BUD_RED = registerBlock("small_amethyst_bud_red",
             () -> new AmethystClusterBlock(3f, 4f, BlockBehaviour.Properties.of()
                     .strength(1.5f)
+                    .pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.SMALL_AMETHYST_BUD)
                     .lightLevel((p_187409_) -> 1)));
 
     public static final  DeferredBlock<Block> MEDIUM_AMETHYST_BUD_RED = registerBlock("medium_amethyst_bud_red",
             () -> new AmethystClusterBlock(4f, 3f, BlockBehaviour.Properties.of()
                     .strength(1.5f)
+                    .pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.MEDIUM_AMETHYST_BUD)
                     .lightLevel((p_152617_) -> 2)));
 
     public static final  DeferredBlock<Block> LARGE_AMETHYST_BUD_RED = registerBlock("large_amethyst_bud_red",
             () -> new AmethystClusterBlock(5f, 3f, BlockBehaviour.Properties.of()
                     .strength(1.5f)
+                    .pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.LARGE_AMETHYST_BUD)
                     .lightLevel((p_152629_) -> 4)));
 
     public static final  DeferredBlock<Block> AMETHYST_CLUSTER_RED = registerBlock("amethyst_cluster_red",
             () -> new AmethystClusterBlock(7f, 3f, BlockBehaviour.Properties.of()
                     .strength(1.5f)
+                    .pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.AMETHYST_CLUSTER)
                     .lightLevel((p_152632_) -> 5)));
 

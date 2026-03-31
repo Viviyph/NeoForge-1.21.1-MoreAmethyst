@@ -21,11 +21,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AMETHYST_BLOCK_RED.get())
+                .add(ModBlocks.BUDDING_AMETHYST_RED.get())
                 .add(ModBlocks.SMALL_AMETHYST_BUD_RED.get())
                 .add(ModBlocks.MEDIUM_AMETHYST_BUD_RED.get())
                 .add(ModBlocks.LARGE_AMETHYST_BUD_RED.get())
                 .add(ModBlocks.AMETHYST_CLUSTER_RED.get());
-
-        //Why does cluster still give loot table drops when mined with hand
     }
 }
