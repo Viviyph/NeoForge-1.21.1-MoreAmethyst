@@ -11,7 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.viv.moreamethyst.MoreAmethyst;
-import net.viv.moreamethyst.block.custom.BuddingAmethystRed;
+import net.viv.moreamethyst.block.custom.budding.BuddingAmethystRed;
 import net.viv.moreamethyst.item.ModItems;
 
 import java.util.function.Supplier;

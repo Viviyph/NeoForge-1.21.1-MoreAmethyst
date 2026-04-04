@@ -41,26 +41,22 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.LARGE_AMETHYST_BUD_RED.get(),
                 block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_RED.get()));
         add(ModBlocks.AMETHYST_CLUSTER_RED.get(),
-                block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_RED.get(), ModItems.AMETHYST_SHARD_RED));
+                block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_RED.get(), ModItems.AMETHYST_SHARD_RED.get()));
 
     }
 
     HolderLookup.RegistryLookup<Enchantment> enchantmentLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
     Holder<Enchantment> fortuneHolder = enchantmentLookup.getOrThrow(Enchantments.FORTUNE);
 
-    protected LootTable.Builder createAmethystClusterDrops(Block block, DeferredItem item) {
+    protected LootTable.Builder createAmethystClusterDrops(Block block, Item item) {
         return createSilkTouchDispatchTable(block,
                 this.applyExplosionDecay(block,
                                 LootItem.lootTableItem(item)
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
                                         .apply(ApplyBonusCount.addOreBonusCount(fortuneHolder))
-                                        .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES)))
-                        )
-                        .otherwise(this.applyExplosionDecay(block,
-                                LootItem.lootTableItem(item)
-                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))) // 2 shards without tool
-                        )
-        );
+                                        .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES))))
+                        .otherwise(this.applyExplosionDecay(block, LootItem.lootTableItem(item)
+                                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))));
     }
 
         //Giving all blocks from ModBlocks

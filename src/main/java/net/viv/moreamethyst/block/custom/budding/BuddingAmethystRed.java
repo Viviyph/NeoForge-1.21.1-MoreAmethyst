@@ -1,4 +1,4 @@
-package net.viv.moreamethyst.block.custom;
+package net.viv.moreamethyst.block.custom.budding;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.viv.moreamethyst.block.ModBlocks;
-import org.jetbrains.annotations.NotNull;
 
 public class BuddingAmethystRed extends BuddingAmethystBlock {
     public BuddingAmethystRed(Properties properties) {
@@ -18,7 +17,7 @@ public class BuddingAmethystRed extends BuddingAmethystBlock {
     }
 
     @Override
-    protected void randomTick(@NotNull BlockState state, @NotNull ServerLevel level, @NotNull BlockPos pos, RandomSource random) {
+    protected void randomTick( BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if(random.nextInt(5) == 0 ) {
             Direction direction = Direction.values()[random.nextInt(Direction.values().length)];
             BlockPos blockpos = pos.relative(direction);
