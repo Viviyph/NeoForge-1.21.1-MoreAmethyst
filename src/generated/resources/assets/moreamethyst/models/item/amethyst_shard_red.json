@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "moreamethyst:item/amethyst_shard_red"
+  }
+}

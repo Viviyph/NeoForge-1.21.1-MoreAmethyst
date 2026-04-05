@@ -14,6 +14,20 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.AMETHYST_SHARD_RED.get());
+        basicItem(ModItems.AMETHYST_SHARD_ORANGE.get());
+        basicItem(ModItems.AMETHYST_SHARD_YELLOW.get());
+        basicItem(ModItems.AMETHYST_SHARD_LIME.get());
+        basicItem(ModItems.AMETHYST_SHARD_GREEN.get());
+        basicItem(ModItems.AMETHYST_SHARD_CYAN.get());
+        basicItem(ModItems.AMETHYST_SHARD_LIGHT_BLUE.get());
+        basicItem(ModItems.AMETHYST_SHARD_BLUE.get());
+        basicItem(ModItems.AMETHYST_SHARD_MAGENTA.get());
+        basicItem(ModItems.AMETHYST_SHARD_PINK.get());
+        basicItem(ModItems.AMETHYST_SHARD_WHITE.get());
+        basicItem(ModItems.AMETHYST_SHARD_LIGHT_GRAY.get());
+        basicItem(ModItems.AMETHYST_SHARD_GRAY.get());
+        basicItem(ModItems.AMETHYST_SHARD_BLACK.get());
+        basicItem(ModItems.AMETHYST_SHARD_BROWN.get());
 
     }
 }

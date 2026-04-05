@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "moreamethyst:amethyst_block_red"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "moreamethyst:amethyst_shard_red"
+  }
+}

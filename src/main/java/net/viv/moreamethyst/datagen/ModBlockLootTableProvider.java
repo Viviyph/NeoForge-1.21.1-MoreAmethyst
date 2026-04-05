@@ -8,7 +8,6 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
@@ -18,8 +17,6 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.viv.moreamethyst.block.ModBlocks;
 import net.viv.moreamethyst.item.ModItems;
 
@@ -32,16 +29,102 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+
         dropSelf(ModBlocks.AMETHYST_BLOCK_RED.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_ORANGE.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_YELLOW.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_LIME.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_GREEN.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_CYAN.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_LIGHT_BLUE.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_BLUE.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_MAGENTA.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_PINK.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_WHITE.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_LIGHT_GRAY.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_GRAY.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_BLACK.get());
+        dropSelf(ModBlocks.AMETHYST_BLOCK_BROWN.get());
+
         add(ModBlocks.BUDDING_AMETHYST_RED.get(), noDrop());
-        add(ModBlocks.SMALL_AMETHYST_BUD_RED.get(),
-                block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_RED.get()));
-        add(ModBlocks.MEDIUM_AMETHYST_BUD_RED.get(),
-                block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_RED.get()));
-        add(ModBlocks.LARGE_AMETHYST_BUD_RED.get(),
-                block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_RED.get()));
-        add(ModBlocks.AMETHYST_CLUSTER_RED.get(),
-                block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_RED.get(), ModItems.AMETHYST_SHARD_RED.get()));
+        add(ModBlocks.BUDDING_AMETHYST_ORANGE.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_YELLOW.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_LIME.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_GREEN.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_CYAN.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_LIGHT_BLUE.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_BLUE.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_MAGENTA.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_PINK.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_WHITE.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_LIGHT_GRAY.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_GRAY.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_BLACK.get(), noDrop());
+        add(ModBlocks.BUDDING_AMETHYST_BROWN.get(), noDrop());
+
+        add(ModBlocks.SMALL_AMETHYST_BUD_RED.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_RED.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_ORANGE.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_ORANGE.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_YELLOW.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_YELLOW.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_LIME.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_LIME.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_GREEN.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_GREEN.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_CYAN.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_CYAN.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_LIGHT_BLUE.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_LIGHT_BLUE.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_BLUE.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_BLUE.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_MAGENTA.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_MAGENTA.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_PINK.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_PINK.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_WHITE.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_WHITE.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_LIGHT_GRAY.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_LIGHT_GRAY.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_GRAY.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_GRAY.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_BLACK.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_BLACK.get()));
+        add(ModBlocks.SMALL_AMETHYST_BUD_BROWN.get(), block -> createSilkTouchOnlyTable(ModBlocks.SMALL_AMETHYST_BUD_BROWN.get()));
+
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_RED.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_RED.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_ORANGE.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_ORANGE.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_YELLOW.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_YELLOW.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_LIME.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_LIME.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_GREEN.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_GREEN.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_CYAN.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_CYAN.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_LIGHT_BLUE.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_LIGHT_BLUE.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_BLUE.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_BLUE.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_MAGENTA.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_MAGENTA.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_PINK.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_PINK.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_WHITE.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_WHITE.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_LIGHT_GRAY.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_LIGHT_GRAY.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_GRAY.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_GRAY.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_BLACK.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_BLACK.get()));
+        add(ModBlocks.MEDIUM_AMETHYST_BUD_BROWN.get(), block -> createSilkTouchOnlyTable(ModBlocks.MEDIUM_AMETHYST_BUD_BROWN.get()));
+
+        add(ModBlocks.LARGE_AMETHYST_BUD_RED.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_RED.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_ORANGE.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_ORANGE.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_YELLOW.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_YELLOW.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_LIME.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_LIME.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_GREEN.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_GREEN.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_CYAN.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_CYAN.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_LIGHT_BLUE.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_LIGHT_BLUE.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_BLUE.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_BLUE.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_MAGENTA.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_MAGENTA.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_PINK.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_PINK.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_WHITE.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_WHITE.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_LIGHT_GRAY.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_LIGHT_GRAY.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_GRAY.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_GRAY.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_BLACK.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_BLACK.get()));
+        add(ModBlocks.LARGE_AMETHYST_BUD_BROWN.get(), block -> createSilkTouchOnlyTable(ModBlocks.LARGE_AMETHYST_BUD_BROWN.get()));
+
+        add(ModBlocks.AMETHYST_CLUSTER_RED.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_RED.get(), ModItems.AMETHYST_SHARD_RED.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_ORANGE.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_ORANGE.get(), ModItems.AMETHYST_SHARD_ORANGE.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_YELLOW.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_YELLOW.get(), ModItems.AMETHYST_SHARD_YELLOW.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_LIME.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_LIME.get(), ModItems.AMETHYST_SHARD_LIME.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_GREEN.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_GREEN.get(), ModItems.AMETHYST_SHARD_GREEN.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_CYAN.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_CYAN.get(), ModItems.AMETHYST_SHARD_CYAN.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_LIGHT_BLUE.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_LIGHT_BLUE.get(), ModItems.AMETHYST_SHARD_LIGHT_BLUE.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_BLUE.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_BLUE.get(), ModItems.AMETHYST_SHARD_BLUE.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_MAGENTA.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_MAGENTA.get(), ModItems.AMETHYST_SHARD_MAGENTA.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_PINK.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_PINK.get(), ModItems.AMETHYST_SHARD_PINK.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_WHITE.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_WHITE.get(), ModItems.AMETHYST_SHARD_WHITE.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_LIGHT_GRAY.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_LIGHT_GRAY.get(), ModItems.AMETHYST_SHARD_LIGHT_GRAY.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_GRAY.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_GRAY.get(), ModItems.AMETHYST_SHARD_GRAY.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_BLACK.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_BLACK.get(), ModItems.AMETHYST_SHARD_BLACK.get()));
+        add(ModBlocks.AMETHYST_CLUSTER_RED.get(), block -> createAmethystClusterDrops(ModBlocks.AMETHYST_CLUSTER_RED.get(), ModItems.AMETHYST_SHARD_RED.get()));
 
     }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "moreamethyst:block/budding_amethyst_red"
+  }
+}

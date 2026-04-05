@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "moreamethyst:geode_placed_red",
+  "step": "local_modifications"
+}
